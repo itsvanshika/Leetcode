@@ -1,48 +1,29 @@
 class Solution {
 public:
+    int t[101];
+    int solve(int i, string &s, int &n){
+        if(t[i]!=-1){
+            return t[i];
+        }
+        if(i==n){
+            return t[i] = 1;
+        }
+        if(s[i]=='0'){
+            return t[i]= 0;
+        }
+        int result = solve(i+1,s,n);
+        if(i+1<n){
+      
+           if(s[i] =='1' || (s[i]=='2' && s[i+1] <='6')){
+               result+= solve(i+2,s,n);
+          }
+        }
+        return t[i] = result;
+    }
     int numDecodings(string s) {
-        // Initialize variables to represent counts of decoding ways
-        int a = 1;  // Represents the number of ways to decode the string ending at the current character
-        int b = 1;  // Represents the number of ways to decode the string ending at the previous character
-        int c = 0;  // Temporary variable for swapping during zero-handling
-
-        // Iterate through the string starting from the second character
-        for (int i = 1; i < s.length(); i++) {
-            // Check for invalid decoding (e.g., '30' or '40-90')
-            if (s[i] == '0' && (s[i - 1] > '2' || s[i - 1] < '1')) {
-                return 0;
-            }
-            // Check for valid two-digit mapping
-            else if (s[i - 1] != '0' && ((s[i - 1] - '0') * 10 + (s[i] - '0')) < 27) {
-                // Handle zero in the current digit
-                if (s[i] == '0') {
-                    c = b;
-                    b = a;
-                    a = c;
-                    continue;
-                }
-                // Update counts for non-zero cases
-                else {
-                    c = b;
-                    b = a;
-                    a = a + c;
-                    continue;
-                }
-            }
-            // Handle one-digit mapping
-            else {
-                b = a;
-                continue;
-            }
-        }
-
-        // Check for invalid starting character
-        if (s[0] == '0') {
-            return 0;
-        }
-
-        // Return the final count representing the total number of ways to decode the string
-        return a;
+        int n = s.length();
+        memset(t,-1,sizeof((t)));
+        return solve(0,s,n);
  
     }
 };
