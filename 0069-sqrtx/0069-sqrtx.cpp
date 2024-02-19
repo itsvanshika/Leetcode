@@ -3,10 +3,10 @@ public:
 long long int binary_search(int n ){
     int s=0;
     int e=n;
-    long long int mid=s+(e-s)/2;
-    long long int ans=-1;
+    long int mid=s+(e-s)/2;
+    long int ans=-1;
     while(s<=e){
-        long long int sq=mid*mid;
+        long int sq=mid*mid;
         if(sq==n){
             return mid;
         }
