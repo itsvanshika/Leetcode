@@ -1,6 +1,7 @@
 class Solution {
 public:
-long long int binary_search(int n ){
+
+int mySqrt(int n) {
     int s=0;
     int e=n;
     long int mid=s+(e-s)/2;
@@ -20,10 +21,6 @@ long long int binary_search(int n ){
         mid=s+(e-s)/2;
     
     }
-    return ans;
-}
-    int mySqrt(int x) {
-        return binary_search(x);
-    }
+    return ans;    }
 
 };
