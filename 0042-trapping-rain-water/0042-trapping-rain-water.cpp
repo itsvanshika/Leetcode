@@ -1,18 +1,21 @@
 class Solution {
 public:
-    int trap(std::vector<int>& height) {
-        int i = 0, left_max = height[0], sum = 0;
-        int j = height.size() - 1, right_max = height[j];
-        while (i < j) {
-            if (left_max <= right_max) {
-                sum += (left_max - height[i]);
-                i++;
-                left_max = std::max(left_max, height[i]);
-            } else {
-                sum += (right_max - height[j]);
-                j--;
-                right_max = std::max(right_max, height[j]);
-            }
+    int trap(vector<int>& height) {
+        int n = height.size();
+        vector<int> leftmax(n + 1);
+        vector<int> rightmax(n + 1);
+        leftmax[0] = height[0];
+        for (int i = 1; i < n; i++) {
+            leftmax[i] = max(leftmax[i - 1], height[i]);
+        }
+        rightmax[n - 1] = height[n - 1];
+        for (int i = n - 2; i >= 0; i--) {
+            rightmax[i] = max(rightmax[i + 1], height[i]);
+        }
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            int h = min(leftmax[i], rightmax[i]) - height[i];
+            sum += h;
         }
         return sum;
     }
