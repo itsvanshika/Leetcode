@@ -11,24 +11,19 @@
  */
 class Solution {
 public:
-    int distributeCoins(TreeNode* root) {
-        moves = 0;
-        dfs(root);
-        return moves;
+    int solve(TreeNode *root, int &moves){
+        if(root==NULL){
+            return 0;
+        }
+        int l = solve(root->left,moves);
+        int r = solve(root->right,moves);
+        moves+= abs(l)+abs(r);
+        return (l+r+root->val)-1;
+        
     }
-private:
-    int moves;
-    int dfs(TreeNode* current) {
-        if (current == nullptr) return 0;
-
-        // Calculate the coins each subtree has available to exchange
-        int leftCoins = dfs(current->left);
-        int rightCoins = dfs(current->right);
-
-        // Add the total number of exchanges to moves
-        moves += abs(leftCoins) + abs(rightCoins);
-
-        // The number of coins current has available to exchange
-        return (current->val - 1) + leftCoins + rightCoins;
+    int distributeCoins(TreeNode* root) {
+        int moves=0;
+        solve(root,moves);
+        return moves;
     }
 };
