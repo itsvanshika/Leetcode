@@ -1,23 +1,20 @@
 class Solution {
 public:
     int minOperations(vector<string>& logs) {
-        int folderDepth = 0;
-
-        // Iterate through each log operation
-        for (const auto& currentOperation : logs) {
-            // Go up one directory if "../" is encountered, but don't go above
-            // the root
-            if (currentOperation == "../") {
-                folderDepth = max(0, folderDepth - 1);
+        int depth=0;
+        int n = logs.size();
+        for(int i=0;i<n;i++){
+            if(logs[i]=="../"){
+                if(depth>0){
+                depth--;}
             }
-            // Increase depth if the log is not 'stay in the current directory
-            else if (currentOperation != "./") {
-                // Go down one directory
-                ++folderDepth;
+            else if(logs[i]=="./"){
+                continue;
             }
-            // Ignore "./" operations as they don't change the current folder
+            else{
+                depth++;
+            }
         }
-
-        return folderDepth;
+        return depth;
     }
 };
