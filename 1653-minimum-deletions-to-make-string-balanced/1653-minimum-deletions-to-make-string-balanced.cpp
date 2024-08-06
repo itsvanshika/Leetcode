@@ -2,24 +2,26 @@ class Solution {
 public:
     int minimumDeletions(string s) {
         int n = s.length();
-        vector<int> count_a(n, 0);
-        int a_count = 0;
-
-        // First pass: compute count_a which stores the number of
-        // 'a' characters to the right of the current position
-        for (int i = n - 1; i >= 0; i--) {
-            count_a[i] = a_count;
-            if (s[i] == 'a') a_count++;
+        vector<int>left_b(n,0);
+        vector<int>right_a(n,0);
+        int count=0;
+        for(int i=0;i<n;i++){
+            left_b[i] = count;
+            if(s[i]=='b'){
+                count++;
+            }
         }
-
-        int min_deletions = n;
-        int b_count = 0;
-        // Second pass: compute minimum deletions on the fly
-        for (int i = 0; i < n; i++) {
-            min_deletions = min(count_a[i] + b_count, min_deletions);
-            if (s[i] == 'b') b_count++;
+        count=0;
+        for(int i=n-1;i>=0;i--){
+            right_a[i] = count;
+            if(s[i]=='a'){
+                count++;
+            }
         }
-
-        return min_deletions;
+        count=INT_MAX;
+        for(int i=0;i<n;i++){
+            count = min(count,left_b[i]+right_a[i]);
+        }
+        return count;
     }
 };
