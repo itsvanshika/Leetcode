@@ -1,20 +1,18 @@
+#include <cmath>
 class Solution {
 public:
     long long maxKelements(vector<int>& nums, int k) {
-        long long int ans = 0;
-        // Create max-heap to store the elements.
-        priority_queue<int> pq;
-        for (auto& i : nums) {
-            pq.push(i);
+        priority_queue<int,vector<int>>pq;
+        for(int &num:nums){
+            pq.push(num);
         }
-
-        while (k--) {
-            // Add the maxElement in ans and push it's one-third value in the
-            // priority queue.
-            int maxElement = pq.top();
-            ans += maxElement;
+        long long ans=0;
+        while(k>0){
+            int a = pq.top();
+            ans+= a;
             pq.pop();
-            pq.push(ceil(maxElement / 3.0));
+            pq.push(ceil(a/3.0));
+            k--;
         }
         return ans;
     }
