@@ -36,4 +36,20 @@ Leetcode questions solved
 |  |
 | ------- |
 | [3227-find-missing-and-repeated-values](https://github.com/itsvanshika/Leetcode/tree/master/3227-find-missing-and-repeated-values) |
+## String
+|  |
+| ------- |
+| [2456-construct-smallest-number-from-di-string](https://github.com/itsvanshika/Leetcode/tree/master/2456-construct-smallest-number-from-di-string) |
+## Backtracking
+|  |
+| ------- |
+| [2456-construct-smallest-number-from-di-string](https://github.com/itsvanshika/Leetcode/tree/master/2456-construct-smallest-number-from-di-string) |
+## Stack
+|  |
+| ------- |
+| [2456-construct-smallest-number-from-di-string](https://github.com/itsvanshika/Leetcode/tree/master/2456-construct-smallest-number-from-di-string) |
+## Greedy
+|  |
+| ------- |
+| [2456-construct-smallest-number-from-di-string](https://github.com/itsvanshika/Leetcode/tree/master/2456-construct-smallest-number-from-di-string) |
 <!---LeetCode Topics End-->
