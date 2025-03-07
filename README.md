@@ -32,6 +32,7 @@ Leetcode questions solved
 ## Math
 |  |
 | ------- |
+| [2610-closest-prime-numbers-in-range](https://github.com/itsvanshika/Leetcode/tree/master/2610-closest-prime-numbers-in-range) |
 | [3227-find-missing-and-repeated-values](https://github.com/itsvanshika/Leetcode/tree/master/3227-find-missing-and-repeated-values) |
 ## Matrix
 |  |
@@ -63,4 +64,8 @@ Leetcode questions solved
 |  |
 | ------- |
 | [2551-apply-operations-to-an-array](https://github.com/itsvanshika/Leetcode/tree/master/2551-apply-operations-to-an-array) |
+## Number Theory
+|  |
+| ------- |
+| [2610-closest-prime-numbers-in-range](https://github.com/itsvanshika/Leetcode/tree/master/2610-closest-prime-numbers-in-range) |
 <!---LeetCode Topics End-->
