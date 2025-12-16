@@ -11,11 +11,13 @@ Leetcode questions solved
 | [2551-apply-operations-to-an-array](https://github.com/itsvanshika/Leetcode/tree/master/2551-apply-operations-to-an-array) |
 | [3227-find-missing-and-repeated-values](https://github.com/itsvanshika/Leetcode/tree/master/3227-find-missing-and-repeated-values) |
 | [3380-shortest-subarray-with-or-at-least-k-ii](https://github.com/itsvanshika/Leetcode/tree/master/3380-shortest-subarray-with-or-at-least-k-ii) |
+| [3562-maximum-profit-from-trading-stocks-with-discounts](https://github.com/itsvanshika/Leetcode/tree/master/3562-maximum-profit-from-trading-stocks-with-discounts) |
 ## Dynamic Programming
 |  |
 | ------- |
 | [0905-length-of-longest-fibonacci-subsequence](https://github.com/itsvanshika/Leetcode/tree/master/0905-length-of-longest-fibonacci-subsequence) |
 | [1849-maximum-absolute-sum-of-any-subarray](https://github.com/itsvanshika/Leetcode/tree/master/1849-maximum-absolute-sum-of-any-subarray) |
+| [3562-maximum-profit-from-trading-stocks-with-discounts](https://github.com/itsvanshika/Leetcode/tree/master/3562-maximum-profit-from-trading-stocks-with-discounts) |
 ## Hash Table
 |  |
 | ------- |
@@ -68,4 +70,12 @@ Leetcode questions solved
 |  |
 | ------- |
 | [2610-closest-prime-numbers-in-range](https://github.com/itsvanshika/Leetcode/tree/master/2610-closest-prime-numbers-in-range) |
+## Tree
+|  |
+| ------- |
+| [3562-maximum-profit-from-trading-stocks-with-discounts](https://github.com/itsvanshika/Leetcode/tree/master/3562-maximum-profit-from-trading-stocks-with-discounts) |
+## Depth-First Search
+|  |
+| ------- |
+| [3562-maximum-profit-from-trading-stocks-with-discounts](https://github.com/itsvanshika/Leetcode/tree/master/3562-maximum-profit-from-trading-stocks-with-discounts) |
 <!---LeetCode Topics End-->
